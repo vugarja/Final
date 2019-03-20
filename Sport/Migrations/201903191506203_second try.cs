@@ -30,6 +30,7 @@ namespace Sport.Migrations
                         DailyPrice = c.Decimal(nullable: false, storeType: "money"),
                         MonthlyPrice = c.Decimal(nullable: false, storeType: "money"),
                         Image = c.String(nullable: false),
+                        
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Categories", t => t.CategoryId, cascadeDelete: true)

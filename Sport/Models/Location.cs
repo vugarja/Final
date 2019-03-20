@@ -36,6 +36,12 @@ namespace Sport.Models
         [Required]
         public string Image { get; set; }
 
+        [Required, StringLength(10)]
+        public string Phone { get; set; }
+
+        [Required, StringLength(300)]
+        public string Info { get; set; }
+
         public Region Region { get; set; }
         public Station Station { get; set; }
         public Category Category { get; set; }

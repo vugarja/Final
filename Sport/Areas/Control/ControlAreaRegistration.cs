@@ -16,7 +16,7 @@ namespace Sport.Areas.Control
         {
             context.MapRoute(
                 "Control_default",
-                "Control/{controller}/{action}/{id}",
+                "control/{controller}/{action}/{id}",
                 new {controller="Home", action = "Index", id = UrlParameter.Optional },
                 new [] { "Sport.Areas.Control.Controllers" }
             );

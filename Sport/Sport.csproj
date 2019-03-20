@@ -133,6 +133,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Control\ControlAreaRegistration.cs" />
+    <Compile Include="Areas\Control\Controllers\DashboardController.cs" />
     <Compile Include="Areas\Control\Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\SportContext.cs" />
@@ -148,6 +149,7 @@
       <DependentUpon>201903191506203_second try.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\Region.cs" />
@@ -1856,6 +1858,9 @@
     <Content Include="Areas\Control\Public\vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
     <Content Include="Areas\Control\Public\vendor\jquery\jquery.min.map" />
     <Content Include="Areas\Control\Public\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="Areas\Control\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Control\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Control\Views\Dashboard\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -1885,7 +1890,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Control\Models\" />
-    <Folder Include="Areas\Control\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

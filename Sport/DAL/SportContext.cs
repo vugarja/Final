@@ -14,7 +14,6 @@ namespace Sport.DAL
         public DbSet<Region> Regions { get; set; }
         public DbSet<Station> Stations { get; set; }
         public DbSet<User> Users { get; set; }
-        
-
+        public DbSet<Admin> Admins { get; set; }
     }
 }
