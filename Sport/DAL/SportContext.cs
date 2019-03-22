@@ -3,7 +3,7 @@ using Sport.Models;
 
 namespace Sport.DAL
 {
-    public class SportContext:DbContext
+    public class SportContext : DbContext
     {
         public SportContext() : base("SportContext")
         {
@@ -15,5 +15,6 @@ namespace Sport.DAL
         public DbSet<Station> Stations { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Admin> Admins { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
     }
 }

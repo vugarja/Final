@@ -1,7 +1,7 @@
 ﻿@model Sport.Models.Admin
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Əsas səhifə";
 }
 
 
@@ -13,19 +13,63 @@
     <!-- Content Row -->
     <h4 class=" text-gray-800">Məlumatlar:</h4>
     <div class="row">
-        <!-- Earnings (Monthly) Card Example -->
+        <!-- Məlumatlar -->
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <a href="#" font-weight-bold text-primary text-uppercase mb-1">Metro Stansiyalar</a>
+                            <a href="@Url.Action("index","regions")" font-weight-bold text-primary text-uppercase mb-1">Rayonlar</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <a href="@Url.Action("index","stations")" font-weight-bold text-primary text-uppercase mb-1">Stansiyalar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <a href="@Url.Action("index","categories")" font-weight-bold text-primary text-uppercase mb-1">Məkan növləri</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <a href="@Url.Action("index","locations")" font-weight-bold text-primary text-uppercase mb-1">Məkanlar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <a href="@Url.Action("index","blogs")" font-weight-bold text-primary text-uppercase mb-1">Bloq yazıları</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Məlumatlar -->
 
     </div>
     <!-- Content Row -->
