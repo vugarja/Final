@@ -140,6 +140,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\AuthAdmin.cs" />
     <Compile Include="Migrations\201903191443376_Database Creation.cs" />
     <Compile Include="Migrations\201903191443376_Database Creation.Designer.cs">
       <DependentUpon>201903191443376_Database Creation.cs</DependentUpon>

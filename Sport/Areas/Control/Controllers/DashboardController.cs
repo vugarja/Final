@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Sport.Helpers;
+using Sport.Models;
 
 namespace Sport.Areas.Control.Controllers
 {
+    [AuthAdmin]
     public class DashboardController : Controller
     {
-        // GET: Control/Dashboard
         public ActionResult Index()
         {
-            return View();
+            Admin admin = Session["Admin"] as Admin;
+
+            return View(admin);
         }
     }
 }

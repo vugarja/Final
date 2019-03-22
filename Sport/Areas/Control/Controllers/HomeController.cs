@@ -32,6 +32,7 @@ namespace Sport.Areas.Control.Controllers
                 if (Crypto.VerifyHashedPassword(adm.Password,admin.Password))
                 {
                     Session["LoginSuccess"] = true;
+                    Session["Admin"] = adm;
                     return RedirectToAction("index", "dashboard");
                 }
             }
