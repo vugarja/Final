@@ -8,7 +8,7 @@ namespace Sport.Models
     {
         public int Id { get; set; }
 
-        [Required, StringLength(20), DisplayName("Adı")]
+        [Required, StringLength(20), DisplayName("Məkan növü")]
         public string Name { get; set; }
 
         public List<Location> Locations { get; set; }

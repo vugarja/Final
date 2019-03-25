@@ -8,7 +8,7 @@ namespace Sport.Models
     {
         public int Id { get; set; }
 
-        [Required, StringLength(20), DisplayName("Adı")]
+        [Required, StringLength(20), DisplayName("Stansiya adı")]
         public string Name { get; set; }
 
         public List<User> Users { get; set; }

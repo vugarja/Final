@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using Sport.DAL;
+using Sport.Helpers;
 using Sport.Models;
 
 namespace Sport.Areas.Control.Controllers
 {
+    [AuthAdmin]
     public class StationsController : Controller
     {
         private SportContext db = new SportContext();

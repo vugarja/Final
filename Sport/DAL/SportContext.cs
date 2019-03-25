@@ -16,5 +16,11 @@ namespace Sport.DAL
         public DbSet<User> Users { get; set; }
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Blog> Blogs { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            Database.SetInitializer<SportContext>(null);
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

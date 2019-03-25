@@ -73,7 +73,6 @@ C:\Users\code\source\repos\Sport\Sport\bin\Antlr3.Runtime.pdb
 C:\Users\code\source\repos\Sport\Sport\bin\System.Diagnostics.DiagnosticSource.xml
 C:\Users\code\source\repos\Sport\Sport\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 C:\Users\code\source\repos\Sport\Sport\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\code\source\repos\Sport\Sport\obj\Debug\Sport.csprojAssemblyReference.cache
 C:\Users\code\source\repos\Sport\Sport\obj\Debug\Sport.csproj.CoreCompileInputs.cache
 C:\Users\code\source\repos\Sport\Sport\obj\Debug\Sport.csproj.CopyComplete
 C:\Users\code\source\repos\Sport\Sport\obj\Debug\Sport.dll

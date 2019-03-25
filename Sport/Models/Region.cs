@@ -9,7 +9,7 @@ namespace Sport.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage ="Ad hissəsi boş ola bilməz"), StringLength(20)]
-        [DisplayName("Ad") ]
+        [DisplayName("Rayon adı") ]
         public string Name { get; set; }
 
         public List<User> Users { get; set; }

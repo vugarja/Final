@@ -167,20 +167,12 @@
   <ItemGroup>
     <Content Include="Areas\Control\Public\css\sb-admin-2.css" />
     <Content Include="Areas\Control\Public\css\sb-admin-2.min.css" />
-    <Content Include="Areas\Control\Public\js\demo\chart-area-demo.js" />
-    <Content Include="Areas\Control\Public\js\demo\chart-bar-demo.js" />
-    <Content Include="Areas\Control\Public\js\demo\chart-pie-demo.js" />
-    <Content Include="Areas\Control\Public\js\demo\datatables-demo.js" />
     <Content Include="Areas\Control\Public\js\sb-admin-2.js" />
     <Content Include="Areas\Control\Public\js\sb-admin-2.min.js" />
     <Content Include="Areas\Control\Public\vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="Areas\Control\Public\vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Areas\Control\Public\vendor\bootstrap\js\bootstrap.js" />
     <Content Include="Areas\Control\Public\vendor\bootstrap\js\bootstrap.min.js" />
-    <Content Include="Areas\Control\Public\vendor\chart.js\Chart.bundle.js" />
-    <Content Include="Areas\Control\Public\vendor\chart.js\Chart.bundle.min.js" />
-    <Content Include="Areas\Control\Public\vendor\chart.js\Chart.js" />
-    <Content Include="Areas\Control\Public\vendor\chart.js\Chart.min.js" />
     <Content Include="Areas\Control\Public\vendor\datatables\dataTables.bootstrap4.css" />
     <Content Include="Areas\Control\Public\vendor\datatables\dataTables.bootstrap4.js" />
     <Content Include="Areas\Control\Public\vendor\datatables\dataTables.bootstrap4.min.css" />
@@ -1868,11 +1860,6 @@
     <Content Include="Areas\Control\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Control\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Control\Views\Dashboard\Index.cshtml" />
-    <Content Include="Areas\Control\Views\Locations\Create.cshtml" />
-    <Content Include="Areas\Control\Views\Locations\Delete.cshtml" />
-    <Content Include="Areas\Control\Views\Locations\Details.cshtml" />
-    <Content Include="Areas\Control\Views\Locations\Edit.cshtml" />
-    <Content Include="Areas\Control\Views\Locations\Index.cshtml" />
     <Content Include="Areas\Control\Views\Regions\Create.cshtml" />
     <Content Include="Areas\Control\Views\Regions\Delete.cshtml" />
     <Content Include="Areas\Control\Views\Regions\Details.cshtml" />
@@ -1893,6 +1880,11 @@
     <Content Include="Areas\Control\Views\Blogs\Details.cshtml" />
     <Content Include="Areas\Control\Views\Blogs\Edit.cshtml" />
     <Content Include="Areas\Control\Views\Blogs\Index.cshtml" />
+    <Content Include="Areas\Control\Views\Locations\Create.cshtml" />
+    <Content Include="Areas\Control\Views\Locations\Delete.cshtml" />
+    <Content Include="Areas\Control\Views\Locations\Details.cshtml" />
+    <Content Include="Areas\Control\Views\Locations\Edit.cshtml" />
+    <Content Include="Areas\Control\Views\Locations\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -1904,6 +1896,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="uploads\blog1.jpg" />
+    <Content Include="uploads\blog2.jpg" />
+    <Content Include="uploads\blog3.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -8,11 +8,9 @@ using System.Web;
 using System.Web.Mvc;
 using Sport.DAL;
 using Sport.Models;
-using Sport.Helpers;
 
 namespace Sport.Areas.Control.Controllers
 {
-    [AuthAdmin]
     public class LocationsController : Controller
     {
         private SportContext db = new SportContext();
@@ -31,7 +29,7 @@ namespace Sport.Areas.Control.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Location location = db.Locations.Find(id);
+            Location location = db.Locations.Include(mbox=>mbox.Station).Include(m=>m.Category).Include(m=>m.Region).FirstOrDefault(x=>x.Id==id);
             if (location == null)
             {
                 return HttpNotFound();
@@ -53,7 +51,7 @@ namespace Sport.Areas.Control.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,StreetAddress,StreetNo,RegionId,StationId,CategoryId,DailyPrice,MonthlyPrice,Image,Phone,Info")] Location location)
+        public ActionResult Create([Bind(Include = "Id,Name,City,Village,StreetName,StreetNo,RegionId,StationId,CategoryId,DailyPrice,MonthlyPrice,Image,Phone,Phone2,Email,Facebook,Instagram,Webpage,Discount,Info")] Location location)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +89,7 @@ namespace Sport.Areas.Control.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,StreetAddress,StreetNo,RegionId,StationId,CategoryId,DailyPrice,MonthlyPrice,Image,Phone,Info")] Location location)
+        public ActionResult Edit([Bind(Include = "Id,Name,City,Village,StreetName,StreetNo,RegionId,StationId,CategoryId,DailyPrice,MonthlyPrice,Image,Phone,Phone2,Email,Facebook,Instagram,Webpage,Discount,Info")] Location location)
         {
             if (ModelState.IsValid)
             {

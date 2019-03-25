@@ -5,7 +5,7 @@
 }
 
 <p>
-    @Html.ActionLink("Yenisini yarat", "Create")
+    @Html.ActionLink("Yenisini yarat", "create")
 </p>
 <table class="table">
     <tr>
@@ -23,9 +23,9 @@
             @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
-            @Html.ActionLink("Dəyiş", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Detallar", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Sil", "Delete", new { id=item.Id })
+            @Html.ActionLink("Dəyiş", "edit", new { id=item.Id }) |
+            @Html.ActionLink("Detallar", "details", new { id=item.Id }) |
+            @Html.ActionLink("Sil", "delete", new { id=item.Id })
         </td>
     </tr>
 }
