@@ -84,3 +84,4 @@ C:\Users\code\source\repos\Sport\Sport\bin\EntityFramework.SqlServer.xml
 C:\Users\code\source\repos\Sport\Sport\obj\Debug\Sport.Migrations.DatabaseCreation.resources
 C:\Users\code\source\repos\Sport\Sport\obj\Debug\Sport.csproj.GenerateResource.cache
 C:\Users\code\source\repos\Sport\Sport\obj\Debug\Sport.Migrations.secondtry.resources
+C:\Users\code\source\repos\Sport\Sport\obj\Debug\Sport.csprojAssemblyReference.cache

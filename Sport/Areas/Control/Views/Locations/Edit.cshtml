@@ -4,9 +4,6 @@
     ViewBag.Title = "Məkanı dəyiş";
 }
 
-@* Using CK editor js *@
-<script src="https://cdn.ckeditor.com/ckeditor5/12.0.0/classic/ckeditor.js"></script>
-
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -82,14 +79,10 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Info, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextAreaFor(model => model.Info, new { htmlAttributes = new { @cols = "111", } })
+                @Html.EditorFor(model => model.Info, new { htmlAttributes = new { @cols = "111", } })
                 @Html.ValidationMessageFor(model => model.Info, "", new { @class = "text-danger" })
             </div>
-            <script>
-                ClassicEditor
-                    .create(document.querySelector('#Info'))
-                    
-            </script>
+           
         </div>
 
         <div class="form-group">

@@ -12,17 +12,17 @@ namespace Sport.Models
         [DisplayName("Adı")]
         public string Name { get; set; }
 
-        //[DisplayName("Şəhər")]
-        //[Required, StringLength(50)]
-        //public string City { get; set; }
+        [DisplayName("Şəhər")]
+        [Required, StringLength(50)]
+        public string City { get; set; }
 
-        //[DisplayName("Kənd")]
-        //[StringLength(50)]
-        //public string Village { get; set; }
+        [DisplayName("Kənd")]
+        [StringLength(50)]
+        public string Village { get; set; }
 
-        //[DisplayName("Küçə adı")]
-        //[Required, StringLength(50)]
-        //public string StreetName { get; set; }
+        [DisplayName("Küçə adı")]
+        [Required, StringLength(50)]
+        public string StreetName { get; set; }
 
         [DisplayName("Küçə №")]
         [Required, StringLength(10)]
@@ -58,29 +58,29 @@ namespace Sport.Models
         [Required, StringLength(10)]
         public string Phone { get; set; }
 
-        //[DisplayName("Telefon 2")]
-        //[StringLength(10)]
-        //public string Phone2 { get; set; }
+        [DisplayName("Telefon 2")]
+        [StringLength(10)]
+        public string Phone2 { get; set; }
 
-        //[DisplayName("E-poçtu")]
-        //[Required,StringLength(100)]
-        //public string Email { get; set; }
+        [DisplayName("E-poçtu")]
+        [Required, StringLength(100)]
+        public string Email { get; set; }
 
-        //[DisplayName("Facebook")]
-        //[Required, StringLength(100)]
-        //public string Facebook { get; set; }
+        [DisplayName("Facebook")]
+        [Required, StringLength(100)]
+        public string Facebook { get; set; }
 
-        //[DisplayName("Instagram")]
-        //[Required, StringLength(100)]
-        //public string Instagram { get; set; }
+        [DisplayName("Instagram")]
+        [Required, StringLength(100)]
+        public string Instagram { get; set; }
 
-        //[DisplayName("Vebsayt")]
-        //[Required, StringLength(200)]
-        //public string Webpage { get; set; }
+        [DisplayName("Vebsayt")]
+        [Required, StringLength(200)]
+        public string Webpage { get; set; }
 
-        //[DisplayName("Endirim haqda")]
-        //[Required, StringLength(200)]
-        //public string Discount { get; set; }
+        [DisplayName("Endirim haqda")]
+        [Required, StringLength(200)]
+        public string Discount { get; set; }
 
         [DisplayName("Haqqında")]
         [Required, StringLength(300)]

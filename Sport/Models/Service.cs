@@ -1,14 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
 
 namespace Sport.Models
 {
-    public class Category
+    public class Service
     {
         public int Id { get; set; }
 
-        [Required, StringLength(20), DisplayName("Məkan növü")]
+        [Required, StringLength(20), DisplayName("Xidmətin adı")]
         public string Name { get; set; }
 
         public List<CategoryService> CategoryServices { get; set; }
