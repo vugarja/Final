@@ -1,0 +1,66 @@
+//axtarish arxa fon
+#searchBg {
+    padding: 0;
+    overflow: hidden;
+    height: 70vh;
+    position: relative;
+    .container {
+        height: 100%;
+        .col-lg-12 {
+            z-index: 1;
+        }
+        .type {
+            span {
+                font-size: 50px;
+                color: $white;
+                font-weight: bold;
+            }
+        }
+    }
+    video {
+        min-width: 100%;
+        min-height: 100%;
+        position: absolute;
+    }
+    &::before {
+        @extend %bf-af;           
+        width: 100%;
+        height: 100%;
+        background: #000000c2;
+        z-index: 1;
+    }
+}
+
+//esas hisse
+#mainSearch {
+    .searching {
+        border-left: 2px solid $main;
+    }
+    .foxholder-form__label {
+        cursor: auto;
+    }
+    .foxholder-form__input--effect-2.is-active {
+        border-bottom-color: $main;
+    }
+    input:focus {
+        background: transparent;
+    }
+
+    .categories {
+        display: inline-block;
+        select {
+            padding: 10px 3px;
+            border-color: $main;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    .col-lg-9 {
+        .card {
+            height: 100%;
+        }
+    }
+}

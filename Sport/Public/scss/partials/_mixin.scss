@@ -1,0 +1,54 @@
+//transition and transform
+@mixin transition($sec) {
+    -webkit-transition: all $sec;
+    transform: all $sec;
+}
+@mixin transform($variable) {
+    -webkit-transform: $variable;
+    -ms-transform: $variable;
+    transform: $variable;
+}
+
+//animation
+@mixin animation-name($var) {
+    -webkit-animation-name: $var;
+    -moz-animation-name: $var;
+    -o-animation-name: $var;
+    animation-name: $var; 
+}
+@mixin animation-duration($var) {
+    -webkit-animation-duration: $var;
+    -moz-animation-duration: $var;
+    -o-animation-duration: $var;
+    animation-duration: $var; 
+}
+@mixin animation-iteration-count($var) {
+    -webkit-animation-iteration-counte: $var;
+    -moz-animation-iteration-counte: $var;
+    -o-animation-iteration-counte: $var;
+    animation-iteration-count: $var; 
+}
+@mixin animation-timing-function($var) {
+    -webkit-animation-timing-functionn: $var;
+    -moz-animation-timing-functionn: $var;
+    -o-animation-timing-functionn: $var;
+    animation-timing-function: $var; 
+}
+@mixin animation-delay($var) {
+    -webkit-animation-duration: $var;
+    -moz-animation-duration: $var;
+    -o-animation-duration: $var;
+    animation-duration: $var; 
+}
+@mixin animation-direction($var) {
+    -webkit-animation-duration: $var;
+    -moz-animation-duration: $var;
+    -o-animation-duration: $var;
+    animation-duration: $var; 
+}
+
+//before after
+%bf-af {
+    content: "";
+    position: absolute;
+}

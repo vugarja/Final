@@ -1,0 +1,586 @@
+%layout {
+    @extend %bf-af;
+    width: 0px;
+    height: 2px;
+    background: $white; 
+    @include transition(0.5s);            
+}
+
+%layout2 {
+    @extend %bf-af;
+    width: 35%;
+    height: 1px;
+    background: $main;
+    top: 45%;
+}
+%logo {
+        color: $main!important;
+        font-family: 'Audiowide', cursive;
+        position: relative;
+        span {
+            position: absolute;
+            top: 0;
+        }
+        
+        .chi {
+            color: $black;
+        }
+        .idman {
+            position: relative;
+        }
+        .az {
+            @include transform(rotate(-90deg));
+            top: 10px;
+        }    
+}
+.iMenu {
+    opacity: 0;
+    display: none;
+    @include transition(0.3s);
+    position: fixed;
+    z-index: 2;
+    margin-top: 67px;
+    overflow-y: scroll; 
+    max-height: 100%;
+    &::-webkit-scrollbar { width: 0 !important }
+    ul {
+        padding: 0;
+        li {
+            position: relative;
+            border-top: 1px solid #80808059;
+            a {
+                padding: 15px 0px;
+                min-width: 50%;
+            }
+            .iBtn {
+                padding: 12px;
+                font-size: 14px;
+                color: $main;
+                &:hover {
+                    color: $white!important;
+                }
+            }
+            
+            .userDown {
+                background: $white;
+                padding: 25px;
+                right: 0;
+                .exit {
+                    &:hover {
+                        color: $white!important;
+                    }
+                    color: $main!important;
+
+                }
+                strong {
+                    width: 100%;
+                    display: inline-block;
+                    font-size: 18px;
+                }
+                .promo {
+                    font-size: 13px;
+                    margin: 10px 0px;
+                }
+                span.code {
+                    font-style: italic;
+                    color: $main;
+                    font-weight: bold;
+                }
+                .iBtn {
+                    font-size: $size;
+                    width: 100%;
+                    text-align: center;
+                    margin: 5px 0px;
+                }
+                a.code {
+                    background: $main;
+                    color: $white!important;
+                }
+            }
+            &:hover {
+                a {
+                    color: initial!important;
+                }
+                
+            }
+        }
+        .sign {
+            padding: 10px;
+        }
+        .iDrop {
+            .iDown {
+                display: none;
+                ul {
+                    li {
+                        a {
+                            padding: 10px 0px 10px 20px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            
+            .fa-sort-down {
+                position: absolute;
+                font-weight: 900;
+                top: 0;
+                right: 0;
+                color:$main;
+                width: 20%;
+                height: 100%;
+                text-align: center;
+                line-height: 45px;
+                font-size: 20px;
+                background: none!important;
+            }
+
+        }
+        .iSubDrop {
+            .fa-sort-down {
+                line-height: 30px;
+                font-size: 16px;
+            }
+            .iSub {
+                display: none;
+                li {
+                    a {
+                        padding-left: 40px!important;
+
+                    }
+                }
+            }
+        }
+    }
+    .downActive {
+        display: block!important;
+    }
+}
+.iMenu.menuActive {
+    opacity: 1;
+    display: block;
+}
+//header
+header {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    .registration {
+        position: absolute;
+        z-index: 10000;
+        .alert {
+            text-align: center;
+        }
+        .iRegistration {
+            .foxholder-form__input {
+                padding: 10px;
+            }
+            .sbm {
+                .iBtn {
+                    max-width: 100%;
+                    padding: 12px;
+                }
+            }
+        }
+        .iReg {
+            .birth {
+                .foxholder-form__item {
+                    width: 25%;
+                    display: inline-block;
+                }
+                .foxholder-form__item:last-child{
+                    margin-bottom: 25px;
+                }
+            }
+        }
+        .sign-in {
+            background: #000000b5;
+            height: 100vh;
+            .sign {
+                width: 100%;
+                background: $white;
+                padding: 60px;
+                padding-bottom: 25px;
+                position: relative;
+                .remember {
+                    color: $main!important;
+                    display: block;
+                }
+                i {
+                    position: absolute;
+                    right: 2%;
+                    top: 2%;
+                    font-size: 25px;
+                    color: #8080807a;
+                    cursor: pointer;
+                    @include transition(0.3s);
+                    &:hover {
+                        color: $main;
+                    }
+                }
+                a.iBtn {
+                    background: $main;
+                    color: $white!important;
+                    margin-top: 10px;
+                    max-width: 100%;
+                    padding: 12px;
+                    &::before {
+                        content: "";
+                    }
+                }
+                
+                p {
+                    margin-top: 1rem;
+                    font-style: italic;
+                    font-weight: bold;
+                    font-size: $size;
+                    position: relative;
+                    
+                    &::before {
+                        @extend %layout2;
+                        left: 0;
+                    }
+                    &::after {
+                        @extend %layout2;
+                        right: 0;
+                    }
+                }
+                span.iBtn {
+                    font-size: $size;
+                    padding: 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .foxholder-form__input--effect-11 ~ .foxholder-form__helper, .foxholder-form__textarea--effect-11 ~ .foxholder-form__helper {
+            background: $main;
+        }
+    }
+    
+    .col-lg-3{
+        a {
+            @extend %logo;
+            font-size: 40px;
+            .dot {
+                right: -70px;
+            }
+            .chi {
+                right: -62px;
+            }
+            .az {
+                font-size: 23px;
+                right: -83px;
+            }
+        }
+        
+    }
+    .col-lg-8 , .col-lg-9{
+        ul {
+            padding: 0;
+            li {
+                display: inline-block;
+                margin-left: 20px;
+                position: relative;
+                @include transition(0.3s);
+                
+
+                a {
+                    color: $white;
+                    padding: 5px 0px;
+                }
+                .iDown {
+                    @include transition(0.3s);                    
+                    position: absolute;
+                    visibility: hidden;
+                    width: 260%;
+                    left: 0;
+                    opacity: 0;
+                    background: $white;
+                    box-shadow: 0px 13px 15px 1px rgba(0, 0, 0, 0.1);
+                    ul {
+                        padding: 10px;
+                        font-size: $size;
+                    }
+                    
+                    li {
+                        @include transition(0.3s);                        
+                        width: 100%;
+                        margin: 0;
+                        padding: 5px 0px;
+                        border-bottom: 1px solid #80808059;
+                        a {
+                            width: 100%;
+                            color: $black;
+                            @include transition(0.3s);                    
+                            &::before {
+                                @include transition(0.3s);                    
+                            }
+                        }
+                        i {
+                            color: $main;
+                        }
+                        &::before {
+                            content: none;
+                        }
+                        &::after {
+                            content: none;
+                        }
+                        a {
+                            &:hover {
+                                @include transform(translate(5px));
+                                color: $main;
+                                &::before {
+                                    content: "\f105";
+                                    font-family: 'Font Awesome 5 Free';
+                                    margin-left: 10px;
+                                    margin-right: 0;
+                                    position: absolute;
+                                    top: 6px;
+                                    left: -20px;
+                                    font-size: 12px;
+                                    font-weight: 900;
+                                }
+                            }
+                            
+                        }
+                            
+                    }
+                   
+
+                }
+                .iSubDrop {
+                    position: relative;
+                    .iSub {
+                        @include transition(0.3s);                
+                        position: absolute;
+                        background: $white;
+                        box-shadow: 0px 13px 15px 1px rgba(0, 0, 0, 0.1);
+                        right: -190px;
+                        top: 0px;
+                        display: inline-block;
+                        width: 100%;
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+                }
+                .userDown {
+                    position: absolute;
+                    background: $white;
+                    padding: 25px;
+                    right: 0;
+                    width: 250px;
+                    .exit {
+                        &:hover {
+                            color: $white!important;
+                        }
+                        color: $main!important;
+
+                    }
+                    strong {
+                        width: 100%;
+                        display: inline-block;
+                        font-size: 18px;
+                    }
+                    .promo {
+                        font-size: 13px;
+                        margin: 10px 0px;
+                    }
+                    span.code {
+                        font-style: italic;
+                        color: $main;
+                        font-weight: bold;
+                    }
+                    .iBtn {
+                        font-size: $size;
+                        width: 100%;
+                        text-align: center;
+                        margin: 5px 0px;
+                    }
+                    a.code {
+                        background: $main;
+                        color: $white!important;
+                    }
+                }
+                
+                &::before {
+                    @extend %layout;                    
+                }
+                &::after {
+                    @extend %layout;                    
+                    bottom: 0;
+                    right: 0;
+                
+                }
+                &:hover {
+                    &::before {
+                        width: 100%;
+                    }
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+            li.iDrop {
+                @include transition(0.3s);        
+                &:hover {
+                    @include transition(0.3s);        
+                    .iDown {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+            li.iSubDrop {
+                @include transition(0.3s);        
+                &:hover {
+                    @include transition(0.3s);        
+                    .iSub {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+            .sign {
+
+                .iBtn{
+                    cursor: pointer;
+                    font-size: 16px;
+                    padding: 5px 5px;
+                    color: $main;
+                    font-weight: bold;
+                    &::before , &::after {
+                        content: none;
+                    }
+                    &:hover {
+                        background: $main;
+                        color: $white;
+                    }
+                }
+                &::before , &::after {
+                    content: none;
+                }
+            }
+            .profile {
+                &::before , &::after {
+                    content: none;
+                }
+                .exit {
+                    color: $main;
+                }
+            }
+            
+        }
+        .fa-user {
+            color: $main;
+            width: 35px;
+            height: 35px;
+            font-size: 22px;
+            border: 2px solid $main;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 35px;
+            vertical-align: middle;
+        }
+        .menu {
+            display: none;
+            position: fixed;
+            right: 10px;
+            top: 20px;
+            @include transition(0.5s);
+            cursor: pointer;
+            .menuIcon {
+                span {
+                    background: $white;
+                    width: 35px;
+                    height: 3px;
+                    display: block;
+                    margin: 6px;
+                    @include transition(0.3s);
+                }
+            }
+            
+        }
+        .menuOpen {
+            @include transform(rotate(-360deg));
+            @include transition(0.5s);
+
+            border: none;
+                span {
+                    background: $main;
+                }
+                span:first-child {
+                    @include transform(rotate(-45deg) translate(-5px, 6px));
+                }
+                span:nth-child(2) {
+                    opacity: 0;
+                }
+                span:last-child {
+                    @include transform(rotate(45deg) translate(-7px, -8px));
+                }
+        }
+        
+    }
+    
+}
+
+//footer
+footer {
+    border-top: 1px solid #80808059;
+    padding: 20px 0px;
+    .copy {
+        text-align: center;
+        p {
+            font-size: 13px;
+            margin: 0;
+        }
+    }
+    .logo {
+        a {
+            @extend %logo;
+            font-size: 23px;
+            .dot {
+                right: -40px;
+            }
+            .az {
+                right: -47px;
+                font-size: 13px;
+                top: 5px;
+            }
+            .chi {
+                right: -36px;
+            }
+        }
+    }
+    .info {
+        .socials {
+            text-align: right;
+            ul {
+                padding: 0;
+            }
+            li {
+                display: inline-block;
+                margin-left: 5px;
+                a {
+                    display: inline-block;
+                    height: 40px;
+                    line-height: 40px;
+                    margin-right: 0;
+                    padding: 0;
+                    text-align: center;
+                    width: 40px;
+                    background-color: $black;
+                    color: $white;
+                    border-radius: 100%;
+                    @include transition(0.5s);            
+                    i {
+                        font-size: 15px;
+                    }
+                    &:hover {
+                        background: $main;
+                    }
+                }
+                
+            }
+        }
+    }
+}

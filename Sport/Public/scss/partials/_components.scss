@@ -1,0 +1,276 @@
+.iBtn {
+    color: $main;
+    padding: 12px 65px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 5px;
+    @include transition(0.5s);            
+    position: relative;
+    border: 1px solid $main;
+    z-index: 1;
+    &::before {
+        @extend %bf-af;
+        width: 0;
+        height: 100%;
+        background: $main;
+        right: 0;
+        top: 0;
+        @include transition(0.5s);  
+        z-index: -1;
+    }
+    &:hover {
+        color: $white;
+        &::before {
+            left: 0%;
+            width: 100%;
+            right: auto;
+        }
+    }
+}
+
+.iCard {
+    .card {
+        @include transition(0.3s);  
+        width: initial;
+        height: 100%;
+        overflow: hidden;
+        .photo {
+            height: 50%;
+            overflow: hidden;
+            img {
+                height: 100%;
+                @include transition(0.3s);  
+            }
+        }
+        p {
+            font-size: 13px;
+        }
+        h5 {
+            color: $main;
+        }
+        span {
+            color: $main;
+            padding-bottom: 10px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        span.sale {
+            background: $main;
+            color: $white;
+            text-align: center;
+            padding: 15px;
+            position: absolute;
+            @include transform(rotate(45deg));  
+            font-size: $size;
+            width: 100%;
+            right: -35%;
+            top: 5%;
+            font-weight: bold;
+        }
+        .iBtn {
+            padding: 8px 0px;
+            text-align: center;
+            background: $main;
+            color: $white;
+            font-size: $size;
+            width: 100%;
+        }
+        &:hover {
+            @include transform(translateY(-8px));  
+            box-shadow: 0px 5px 15px 8px rgba(0, 0, 0, 0.1);
+            img {
+                @include transform(scale(1.1)); 
+            }
+        }
+    }
+}
+
+.pag {
+    ul {
+        padding: 0;
+        li {
+            display: inline-block;
+            // border-radius: 100%;
+            @include transition(0.3s);  
+            a {
+                font-size: 15px;
+                width: 35px;
+                height: 35px;
+                display: inline-block;
+                line-height: 35px;
+                font-weight: 600;
+
+                i {
+                    color: $main;
+                    font-weight: 900;
+                }
+                
+            }
+            &:hover {
+                background: $bg2;
+            }
+        }
+        .disabled {
+            i {
+                color: #8080807a;
+            }
+            &:hover {
+                background: initial;
+                a {
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+    .selected {
+        border: 2px solid $main;
+        &:hover {
+            background: initial;
+        }
+    }
+}
+.healthCard {
+    position: relative;
+    background-color: $white;
+    text-align: center;
+    box-shadow: 0px 0px 32px 0px rgba(122, 122, 122, 0.1);
+    @include transition(0.5s);  
+    overflow: hidden;
+    img {
+        max-width: 100%;
+    }
+    .cardBg {
+        @include transition(0.5s); 
+        &::before {
+            @include transition(0.5s);  
+            @extend %bf-af;
+            width: 100%;
+            height: 100%;
+            background: #0000008f;
+            left: 0;
+        }
+    }
+    h3 ,h2 {
+        font-weight: 700;
+        position: absolute;
+        top: 45%;
+        display: inline-block;
+        width: 100%;
+        left: 0;
+        a {
+            color: $white;
+        }
+    }
+    &:hover {
+        .cardBg {
+            @include transform(scale(1.2));  
+            &::before {
+                background: #00000033;
+            }
+        }
+    }
+}
+
+.iHead {
+    position: relative;
+    line-height: 8px;
+    h2 {
+        font-weight: 600;
+        text-align: center;
+    }
+    span {
+        width: 70%;
+        height: 2px;
+        background: $main;
+        display: inline-block;
+    }
+    .sec {
+        width: 50%;        
+    }
+}
+.iHead2 {
+    h2 {
+        color: $white;
+    }
+}
+
+
+.scrolled {
+    background: $white;
+    box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
+    @include transition(0.5s);  
+    color: $black;
+    position: fixed;
+    a {
+        color: $black!important;
+    }
+    h1 {
+        a {
+            color: $main!important;
+        }
+    }
+    li {
+        &::before , &::after {
+            background: $main!important;
+        }
+    }
+    .iDown {
+        li {
+            a {
+                &:hover {
+                    @include transform(translate(5px));  
+                    color: $main!important;
+                }
+                
+            }
+                
+        }
+    }
+    .iBtn {
+        color: $main!important;
+        &:hover {
+            color: $white!important;
+        }
+    }
+    .menu {
+        .menuIcon {
+            span {
+                background: $main!important;
+            }
+        }
+    }
+}
+#headBg {
+    padding: 0;
+    height: 70vh;
+    position: relative;
+    background-image: url(../img/bg/ctg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        .row {
+            width: 100%;
+        }
+        h2 {
+            font-size: 50px;
+        }
+    }
+    &::before {
+        @extend %bf-af;
+        width: 100%;
+        height: 100%;
+        background: #000000c2;
+    }
+}
+
+#contact , #moreGallery, #blog {
+    padding-top: 120px; 
+}
+
+.stopScrolling {
+    overflow: hidden;
+}

@@ -1,0 +1,169 @@
+//desktop
+@media (max-width: 1199px) {
+    footer {
+        // .socials {
+        //     text-align: right;
+        // }
+    }
+}
+
+//tablet
+@media (max-width: 991px) {
+    
+    header {
+        .col-lg-9 {
+            .desktop {
+                display: none;
+            }
+            .menu {
+                display: block;
+            }
+        }
+    }
+    #headBg  {
+        height: 55vh;
+        .container h2 {
+            font-size: 35px;
+        }
+    }
+    #mainSearch {
+        .searching {
+            display: none;
+        }
+    }
+    #mainCalc .info span {
+        font-size: 16px;
+    }
+    #mainMotivation {
+        table {
+            td {
+                font-size: 15px;
+            }
+        }
+        audio {
+            max-width: 230px;
+        }
+    }
+    #blog {
+        .col-md-9 {
+            .mekanlar {
+                h1 {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    #contact {
+        .cntct {
+            a {
+                font-size: 12px;
+            }
+        }
+    }
+    #moreInfo {
+        .cntct {
+            .cn {
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    footer {
+        .copy {
+            text-align: right;
+        }
+        .socials {
+            text-align: center!important;
+        }
+    }
+}
+
+//small tablet
+@media (max-width: 767px) {
+    #health {
+        display: none;
+    }
+    #blog {
+        .col-md-3 {
+            border: none;
+        }
+        .col-md-9 {
+            .mekanlar {
+                h1 {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+    #mainMotivation {
+        table {
+            td {
+                font-size: 14px;
+            }
+        }
+        audio {
+            max-width: 150px;
+        }
+    }
+    #moreInfo {
+        .cntct {
+            .cn {
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    footer {
+        .copy {
+            p {
+                font-size: 10px;
+            }
+        }
+        
+    }
+}
+
+//phone
+@media (max-width: 575px) {
+    #categories {
+        .card {
+            h3 {
+                font-size: 27px;
+            }
+        }
+    }
+    #mainMotivation {
+        table {
+            td {
+                font-size: 13px;
+            }
+        }
+        audio {
+            max-width: 110px;
+        }
+    }
+    #mainCalc .info span {
+        font-size: 14px;
+    }
+    #moreInfo {
+        .cntct {
+            .cn {
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    #moreGallery {
+        .view {
+            i {
+                font-size: 14px;
+            }
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+}

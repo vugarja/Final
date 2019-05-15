@@ -1,0 +1,30 @@
+﻿@model Sport.Models.Service
+
+@{
+    ViewBag.Title = "Sil";
+}
+
+<h3>Xidməti silmək istədiyinə əminsən?</h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+         <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-danger" /> |
+            @Html.ActionLink("Siyahıya qayıt", "index")
+        </div>
+    }
+</div>

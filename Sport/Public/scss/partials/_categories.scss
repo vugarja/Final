@@ -1,0 +1,21 @@
+#categoriesIndex {
+    background-image: url(../img/bg/ctg.jpg);
+}
+#mainCategories {
+    .categories {
+        display: inline-block;
+        select {
+            padding: 10px;
+            border-color: $main;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    
+    
+
+    
+}

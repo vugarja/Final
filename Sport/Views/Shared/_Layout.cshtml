@@ -1,42 +1,276 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>İdmançı</title>
+    <link rel="icon" type="image/png" href="/Public/img/i2.png">
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+    <!-- plugin -->
+    <link rel="stylesheet" href="/Public/scss/foxholder.min.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+
+    <!-- main -->
+    <link rel="stylesheet" href="/Public/scss/style.css">
 </head>
+
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    @*<div id="loader">
+        <div class="pulse"></div>
+    </div>*@
+
+    <header class="headerMain">
+        <div class="container-fluid registration d-none">
+            <div class="row sign-in justify-content-center iRegistration d-none">
+                <div class="col-lg-4 col-sm-8 col-md-6 d-flex align-items-center">
+                    <div class="sign">
+                        <form class="iReg">
+                            <input id="name" type="text" placeholder="Ad">
+                            <input id="surname" type="text" placeholder="Soyad">
+                            <input id="mail" type="email" placeholder="E-poçt">
+                            <input id="pass" type="password" placeholder="Şifrə">
+                            <input id="pass2" type="password" placeholder="Şifrə">
+                            <!-- <div class="birth d-flex justify-content-between">
+                                <input id="day" type="text" placeholder="Gün">
+                                <input id="month" type="text" placeholder="Ay">
+                                <input id="year" type="text" placeholder="İl">
+                            </div> -->
+
+                            <div class="sbm text-center">
+                                <button type="submit" class="iBtn">Qeydiyyat</button>
+                            </div>
+                        </form>
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+            <div class="row sign-in justify-content-center iSigning d-none">
+                <div class="col-lg-4 col-sm-8 col-md-6 d-flex align-items-center">
+                    <div class="sign text-center">
+                        <form class="iReg">
+                            <input id="mail" type="email" placeholder="E-poçt">
+                            <input id="pass" type="password" placeholder="Şifrə">
+                            <div class="sbm text-center">
+                                <a href="#" class="remember d-block">Şifrəni unutmusunuz?</a>
+                                <a href="#" class="iBtn">Daxil ol</a>
+                            </div>
+                        </form>
+                        <p>və ya</p>
+                        <span class="iBtn">Qeydiyyatdan keç</span>
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row sign-in justify-content-center iRemember d-none">
+                <div class="col-lg-4 col-sm-8 col-md-6 d-flex align-items-center">
+                    <div class="sign text-center">
+                        <form class="iReg">
+                            <input id="mail" type="email" placeholder="E-poçt">
+                            <div class="sbm text-center">
+                                <a href="#" class="iBtn mt-2">Təsdiqlə</a>
+                            </div>
+                        </form>
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+        <div class="container">
+            <div class="row justify-content-between pt-2 d-flex align-items-center">
+                <div class="col-lg-3">
+                    <a href="index.html">
+                        <span class="idman">idman</span>
+                        <span class="chi">chi</span>
+                        <span class="dot">.</span>
+                        <span class="az">az</span>
+                    </a>
+                </div>
+                <div class="col-lg-9 text-right">
+                    <ul class="desktop">
+                        <li><a href="index.html">Ana səhifə</a></li>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+                        <!-- mekanlar -->
+                        <li class="iDrop" style="position: relative">
+                            <a href="categories.html">Məkanlar</a>
+                            <div class="iDown text-left">
+                                <ul>
+                                    <li>
+                                        <a href="categories.html">Fitness zalları</a>
+                                    </li>
+                                    <li>
+                                        <a href="categories.html">Futbol meydançaları</a>
+                                    </li>
+                                    <li class="iSubDrop">
+                                        <a href="categories.html">Təkbətək idman növləri</a>
+                                        <div class="iSub">
+                                            <ul>
+                                                <li><a href="categories.html">Boks</a></li>
+                                                <li><a href="categories.html">Kikboks</a></li>
+                                                <li><a href="categories.html">Güləş</a></li>
+                                                <li><a href="categories.html">Cudo</a></li>
+                                                <li><a href="categories.html">Karate</a></li>
+                                                <li><a href="categories.html">Taekvondo</a></li>
+                                                <li style="border: none">
+                                                    <a href="categories.html">Qaydasız döyüş</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="categories.html">Hovuzlar</a>
+                                    </li>
+                                    <li style="border:none" class="iSubDrop">
+                                        <a href="categories.html">Mağazalar</a>
+                                        <div class="iSub">
+                                            <ul>
+                                                <li><a href="categories.html">İdman malları</a></li>
+                                                <li><a href="categories.html">İdman alətləri</a></li>
+                                                <li style="border: none">
+                                                    <a href="categories.html">İdman qidaları</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- saglamliq -->
+                        <li class="iDrop" style="position: relative">
+                            <a href="health.html">Sağlamlıq</a>
+                            <div class="iDown text-left" style="width: 250%">
+                                <ul>
+                                    <li>
+                                        <a href="programs.html">Məşq proqramları</a>
+                                    </li>
+                                    <li>
+                                        <a href="calculation.html">Sağlamlıq hesablamaları</a>
+                                    </li>
+                                    <li>
+                                        <a href="nutrition.html">Qidalar</a>
+                                    </li>
+                                    <li style="border:none">
+                                        <a href="motivation.html">Motivasiya</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="about.html">Haqqımızda</a></li>
+                        <li><a href="contact.html">Əlaqə</a></li>
+
+                        <!-- user -->
+                        <li class="sign"><a class="iBtn enter">Daxil ol</a></li>
+                        <li class="profile d-none userDrop">
+                            <a href="#"><i class="fas fa-user"></i></a>
+                            <div class="userDown text-left d-none">
+                                <strong>Ad Soyad</strong>
+                                <div class="promo d-flex justify-content-between">
+                                    <span>Mövcud promokod: </span>
+                                    <span class="code">D4QSE2</span>
+                                </div>
+                                <a href="#" class="iBtn code">Promokod əldə et</a>
+                                <a href="#" class="iBtn exit">Çıxış</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <div class="menu">
+                        <div class="menuIcon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+    @RenderBody()
+    <footer>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-6 col-lg-1 logo">
+                        <div class="iLogo">
+                            <a href="index.html">
+                                <span class="idman">idman</span>
+                                <span class="chi">chi</span>
+                                <span class="dot">.</span>
+                                <span class="az">az</span>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="col-6 col-lg-4 copy">
+                        <p>Сopyright © 2019 idmanchi.az</p>
+                    </div>
+                    <div class="col-lg-7 info mt-2">
+                        <div class="socials">
+                            <ul>
+                                <li>
+                                    <a href="#" class="fb" title="Facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="wp" title="Whatsapp">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="gm" title="E-mail">
+                                        <i class="far fa-envelope"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="ig" title="Instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!----------------------- plugin ----------------------------->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.6.1/vanilla-tilt.js"></script>
+    <script src="/Public/js/plugins/foxholder.js"></script>
+    <script src="/Public/js/plugins/skroll.min.js"></script>
+
+    <script src="/Public/js/plugins/three.min.js"></script>
+    <script src="/Public/js/plugins/projector.js"></script>
+    <script src="/Public/js/plugins/canvas-renderer.js"></script>
+    <script src="/Public/js/plugins/3d-lines-animation.js"></script>
+    <script src="/Public/js/plugins/color.js"></script>
+    <!------------------------------------------------------------>
+    <!----------------------- main ----------------------------->
+    <script src="/Public/js/home.js"></script>
+    <script src="/Public/js/scrollplugin.js"></script>
+    <script src="/Public/js/script.js"></script>
+    <!---------------------------------------------------------->
+
 </body>
+
 </html>

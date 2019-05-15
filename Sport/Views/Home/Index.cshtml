@@ -2,30 +2,311 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<div class="container-fluid iMenu">
+    <div class="row" style="background: white; margin-bottom:80px">
+        <div class="col-md-12">
+            <ul class="small">
+                <!-- user -->
+                <li class="sign text-center"><a class="iBtn enter">Daxil ol</a></li>
+                <li class="profile d-none userDrop">
+                    <div class="userDown text-left">
+                        <strong>Ad Soyad</strong>
+                        <div class="promo d-flex justify-content-between">
+                            <span>Mövcud promokod: </span>
+                            <span class="code">D4QSE2</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="#" class="iBtn code">Promokod</a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="iBtn">Çıxış</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="index.html">Ana səhifə</a></li>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+                <!-- mekanlar -->
+                <li class="iDrop" style="position: relative">
+                    <a href="categories.html">Məkanlar</a>
+                    <i class="fas fa-sort-down"></i>
+                    <div class="iDown text-left">
+                        <ul>
+                            <li>
+                                <a href="categories.html">Fitness zalları</a>
+                            </li>
+                            <li>
+                                <a href="categories.html">Futbol meydançaları</a>
+                            </li>
+                            <li class="iSubDrop">
+                                <a href="categories.html">Təkbətək idman növləri</a>
+                                <i class="fas fa-sort-down"></i>
+                                <div class="iSub">
+                                    <ul>
+                                        <li><a href="categories.html">Boks</a></li>
+                                        <li><a href="categories.html">Kikboks</a></li>
+                                        <li><a href="categories.html">Güləş</a></li>
+                                        <li><a href="categories.html">Cudo</a></li>
+                                        <li><a href="categories.html">Karate</a></li>
+                                        <li><a href="categories.html">Taekvondo</a></li>
+                                        <li>
+                                            <a href="categories.html">Qaydasız döyüş</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="categories.html">Hovuzlar</a>
+                            </li>
+                            <li class="iSubDrop">
+                                <a href="categories.html">Mağazalar</a>
+                                <i class="fas fa-sort-down"></i>
+                                <div class="iSub">
+                                    <ul>
+                                        <li><a href="categories.html">İdman malları</a></li>
+                                        <li><a href="categories.html">İdman alətləri</a></li>
+                                        <li><a href="categories.html">İdman qidaları</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- saglamliq -->
+                <li class="iDrop" style="position: relative">
+                    <a href="health.html">Sağlamlıq</a>
+                    <i class="fas fa-sort-down"></i>
+                    <div class="iDown text-left">
+                        <ul>
+                            <li>
+                                <a href="programs.html">Məşq proqramları</a>
+                            </li>
+                            <li>
+                                <a href="calculation.html">Sağlamlıq hesablamaları</a>
+                            </li>
+                            <li>
+                                <a href="nutrition.html">Qidalar</a>
+                            </li>
+                            <li>
+                                <a href="motivation.html">Motivasiya</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="about.html">Haqqımızda</a></li>
+                <li><a href="contact.html">Əlaqə</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+
 </div>
+<main>
+    <section id="home">
+        <div class="canvas-wrap">
+            <div id="canvas" class="gradient"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <a href="search.html" class="searching">Axtarış</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="categories">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-12 iHead element">
+                    <h2>Məkanlar</h2>
+                </div>
+                <div class="col-lg-3 text-center iHead">
+                    <span></span>
+                    <span class="sec"></span>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Fitness zalları -->
+                <div class="col-sm-4 mb-5 mekanlar">
+                    <div class="card">
+                        <a href="categories.html">
+                            <div class="photo">
+                                <img src="~/Public/img/categories/fitness.jpeg">
+                            </div>
+                            <h3>Fitness zalları</h3>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- futbol -->
+                <div class="col-sm-4 mb-5 mekanlar">
+                    <div class="card">
+                        <a href="categories.html">
+                            <div class="photo">
+                                <img src="~/Public/img/categories/football.jpg">
+                            </div>
+                            <h3>Futbol meydançaları</h3>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Təkbətək idman növləri -->
+                <div class="col-sm-4 mb-5 mekanlar">
+                    <div class="card">
+                        <a href="categories.html">
+                            <div class="photo">
+                                <img src="~/Public/img/categories/maa.jpeg">
+                            </div>
+                            <h3>Təkbətək idman növləri</h3>
+                        </a>
+                    </div>
+                </div>
+                <!-- hovuz -->
+                <div class="col-sm-4 mb-5 mekanlar">
+                    <div class="card">
+                        <a href="categories.html">
+                            <div class="photo">
+                                <img src="~/Public/img/categories/swim.jpeg">
+                            </div>
+                            <h3>Hovuzlar</h3>
+                        </a>
+                    </div>
+                </div>
+                <!-- magazalar -->
+                <div class="col-sm-4 mb-5 mekanlar">
+                    <div class="card">
+                        <a href="categories.html">
+                            <div class="photo">
+                                <img src="~/Public/img/categories/shops.jpg">
+                            </div>
+                            <h3>Mağazalar</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <a href="categories.html" class="iBtn">
+                        Ətraflı
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="health">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-12 iHead">
+                    <h2>Sağlamlıq</h2>
+                </div>
+                <div class="col-lg-3 text-center iHead">
+                    <span></span>
+                    <span class="sec"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3 mb-5 saglamliq">
+                            <div class="healthCard iTilt" data-tilt data-tilt-scale="1.1" data-tilt-axis="y">
+                                <div class="cardHead">
+                                    <a href="programs.html" class="cardBg">
+                                        <img src="~/Public/img/health/programs2.jpg">
+                                    </a>
+                                    <h2><a href="programs.html">Məşq proqramları</a></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-5 saglamliq">
+                            <div class="healthCard iTilt" data-tilt data-tilt-scale="1.1" data-tilt-axis="y">
+                                <div class="cardHead">
+                                    <a href="calculation.html" class="cardBg">
+                                        <img src="~/Public/img/health/calculate.jpg">
+                                    </a>
+                                    <h2><a href="calculation.html">Hesablamalar</a></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-5 saglamliq">
+                            <div class="healthCard iTilt" data-tilt data-tilt-scale="1.1" data-tilt-axis="y">
+                                <div class="cardHead">
+                                    <a href="nutrition.html" class="cardBg">
+                                        <img src="~/Public/img/health/food.jpg">
+                                    </a>
+                                    <h2><a href="nutrition.html">Qidalar</a></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-5 saglamliq">
+                            <div class="healthCard iTilt" data-tilt data-tilt-scale="1.1" data-tilt-axis="y">
+                                <div class="cardHead">
+                                    <a href="motivation.html" class="cardBg">
+                                        <img src="~/Public/img/health/motivation.jpg">
+                                    </a>
+                                    <h2><a href="motivation.html">Motivasiya</a></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section id="shops">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-12 iHead">
+                    <h2>Mağazalar</h2>
+                </div>
+                <div class="col-lg-3 text-center iHead">
+                    <span></span>
+                    <span class="sec"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-4 mb-5 magazalar">
+                            <div class="healthCard iTilt" data-tilt data-tilt data-tilt-axis="y">
+                                <div class="cardHead">
+                                    <a href="shop.html" class="cardBg">
+                                        <img src="img/health/wear.jpg">
+                                    </a>
+                                    <h2><a href="shop.html">İdman malları</a></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-5 magazalar">
+                            <div class="healthCard iTilt" data-tilt data-tilt data-tilt-axis="y">
+                                <div class="cardHead">
+                                    <a href="shop.html" class="cardBg">
+                                        <img src="img/health/protein2.jpg">
+                                    </a>
+                                    <h2><a href="shop.html">İdman qidaları</a></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-5 magazalar">
+                            <div class="healthCard iTilt" data-tilt data-tilt data-tilt-axis="y">
+                                <div class="cardHead">
+                                    <a href="shop.html" class="cardBg">
+                                        <img src="img/health/shop.jpg">
+                                    </a>
+                                    <h2><a href="shop.html">İdman alətləri</a></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <a href="shop.html" class="iBtn">
+                        Ətraflı
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+</main>

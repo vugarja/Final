@@ -1,0 +1,160 @@
+%home {
+    @extend %bf-af;           
+    width: 210px;
+    height: 68px;
+    border: 1px solid $white;
+    left: 0;
+    top: 0;
+    @include transition(0.5s); 
+}
+
+%home2{
+    @extend %bf-af;
+    width: 140px;
+    height: 140px;
+    left: 17%;
+    top: -57%;
+    @include animation-iteration-count(infinite);
+    @include animation-timing-function(linear);
+}
+
+#home {
+    .container {
+        height: 100%;
+        right: 0;
+        left: 0;
+        top: 50%;
+        position: absolute;
+    }
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    #canvas {
+        canvas {
+            max-width: 100%;
+        }
+    }
+    .searching {
+        color: $white;
+        padding: 15px 60px;
+        text-decoration: none;
+        font-size: 25px;
+        border-radius: 5px;
+        @include transition(0.5s);        
+        position: relative;
+        
+        &::before {
+            @extend %home;           
+        }
+        &::after {
+            @extend %home;           
+        }
+        &:hover {
+            border: none;
+            
+            &::before {
+                @extend %home2;
+                @include transform(rotate(45deg));
+                @include animation-name(rotateBefore);
+                @include animation-duration(2s);
+            }
+            &::after {
+                @extend %home2;
+                @include animation-name(rotateAfter);
+                @include animation-duration(3s);
+            }
+        }
+    }
+    
+    @keyframes rotateAfter {
+        from {
+            @include transform(rotate(0deg));
+        }
+        to {
+            @include transform(rotate(360deg));            
+        }
+    }
+    @keyframes rotateBefore {
+        from {
+            @include transform(rotate(0deg));
+        }
+        to {
+            @include transform(rotate(-360deg));            
+        }
+    }
+
+    @-webkit-keyframes rotateAfter {
+        from {
+            @include transform(rotate(0deg));
+        }
+        to {
+            @include transform(rotate(360deg));            
+        }
+    }
+    @-webkit-keyframes rotateBefore {
+        from {
+            @include transform(rotate(0deg));
+        }
+        to {
+            @include transform(rotate(-360deg));            
+        }
+    }
+}
+
+#categories {
+    background: $bg2;
+    .card {
+        @include transition(0.5s);                    
+        overflow: hidden;
+        img {
+            max-width: 100%;
+            @include transition(0.5s);                        
+        }
+        h3 {
+            margin: 0;
+            position: absolute;
+            color: $white;
+            top: 0;
+            text-align: center;
+            width: 100%;
+            top: 40%;
+            font-weight: 700;
+            z-index: 1;
+            font-size: 2vw;
+        }
+        .photo {
+            @include transition(0.5s);                        
+            &::before {
+                @include transition(0.5s);                        
+                @extend %bf-af;
+                width: 100%;
+                height: 100%;
+                background: #000000c4;
+                left: 0;
+                z-index: 1;
+            }
+        }
+        &:hover {
+                @include transform(scale(1.1));            
+            
+            .photo {
+                &::before {
+                    background: #0000005b;
+                }
+            }
+        }
+    }
+    
+}
+
+#health {
+    .iBtn {
+        &::before {
+            background: $main;        
+        }
+    }
+}
+
+#shops {
+    background: $bg2;
+}

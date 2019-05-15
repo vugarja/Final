@@ -1,0 +1,51 @@
+#moreGallery {
+    img {
+        max-width: 100%;
+    } 
+    .view {
+        color: $gray;
+        font-weight: bold;
+        i {
+            font-size: 18px;
+        }
+    }  
+}
+#moreInfo {
+    padding-top: 0;
+    .sale {
+        strong {
+            font-size: 20px;
+            font-style: italic;
+        }
+        span {
+            font-size: 25px;
+            color: $main;
+            vertical-align: middle;
+        }
+    }
+    span.about {
+        color: $main;
+        font-size: 25px;
+        font-weight: bold;
+        font-style: italic;
+        margin-bottom: 15px;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+    iframe {
+        max-width: 100%;
+    }    
+}
+.blockHeader  {
+    .iPromo {
+        strong {
+            font-size: 13px;
+            text-align: left;
+            display: block;
+            color: $main;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+    }
+}

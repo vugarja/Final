@@ -1,0 +1,22 @@
+﻿@model Sport.Models.Service
+
+@{
+    ViewBag.Title = "Detallar";
+}
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Dəyiş", "edit", new { id = Model.Id }) |
+    @Html.ActionLink("Siyahıya qayıt", "index")
+</p>

@@ -1,0 +1,153 @@
+//saglamliq
+.healthIndex {
+    background-image: url(../img/bg/health.jpg)!important;
+}
+#mainHealth {
+    .col-lg-3 {
+        @include transition(0.3s);  
+        padding: 10px;
+    }
+    .activeHover {
+        @include transform(scale(1.12));  
+        z-index: 99;
+    }
+}
+.bodyBg {
+    background: #0000008f;
+}
+
+
+//mesq proqramlari
+#mainPrograms {
+    .col-lg-3 {
+        a {
+            height: 100%;
+            .photo{
+                height: initial;
+            }
+            h5 {
+                font-size: 18px;
+                margin: 0;
+            }
+        }
+    }
+}
+
+
+//qidalar
+.nutritionIndex {
+    background-image: url(../img/bg/ntr.jpg)!important;
+}
+//proqram bloqu, qida bloqu
+.programIndex {
+    background-image: url(../img/bg/prg.jpg)!important;
+}
+#blog {
+    .col-md-3 {
+        border-left: 2px solid $main;
+        h4 {
+            font-weight: bold;
+            color: $main;
+            border-bottom: 1px solid;
+            padding: 10px;
+            text-align: center;
+        }
+        ul {
+            padding: 0;
+            li {
+                padding: 10px;
+                border-bottom: 1px solid #80808059;
+                @include transition(0.3s);  
+                font-weight: 400;
+                &:hover {
+                    background: $bg2;
+                    a {
+                        color: $main;
+                    }
+                }
+            }
+        }
+    }
+    .col-md-9 {
+        img {
+            max-width: 100%;
+        }
+        h1 {
+            margin: 25px 0px;
+            color: $main;
+            font-weight: bold;
+        }
+        
+    }
+}
+
+//motivasiya
+.motivationIndex {
+    background-image: url(../img/bg/motivation.webp)!important;
+}
+#mainMotivation {
+    table {
+        td {
+            vertical-align: middle;
+        }
+        a {
+            @include transition(0.3s);  
+            font-weight: bold;
+            i {
+                color: $main;
+                font-size: 20px;
+                margin-left: 5px;
+            }
+            &:hover {
+                color: $main;
+            }
+        }
+        audio {
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+// hesablamalar
+.calcIndex {
+    background-image: url(../img/bg/calc.jpg)!important;
+}
+#mainCalc {
+    form {
+        .radioSpan {
+            display: block;
+            margin-top: 20px;
+            color: $main;
+            font-weight: bold;
+        }
+    }
+    input {
+        border-color: $main;
+        border-radius: 5px;
+        max-width: 70%;
+    }
+    .foxholder-form__icon--effect-7 {
+        border-left-color: $main;
+    }
+    select {
+        padding: 10px;
+        border-color: $main;
+        border-radius: 5px;
+    }
+    .info {
+        border-left: 2px solid $main;
+        span {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .calc {
+            color: $main;
+            font-weight: bold;
+            font-style: initial;
+            text-align: right;
+        }
+    }
+}

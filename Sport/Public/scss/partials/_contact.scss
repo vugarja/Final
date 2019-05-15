@@ -1,0 +1,84 @@
+.scrolled {
+    @include transition(0.5s);  
+    position: fixed;
+    background: $white;
+}
+#contact {
+    input ,textarea {
+        border-color: $main;
+    }
+    .foxholder-form__overlay{
+        background: $main;
+    }
+    label {
+        font-size: $size;
+    }
+    .cntct {
+        .cn {
+            margin-bottom: 20px;
+            i {
+                width: 25px;
+                height: 25px;
+                text-align: center;
+                font-size: 25px;
+                color: $main;
+                margin-right: 10px;
+            }
+            a {
+                font-style: italic;
+                @include transition(0.3s);  
+                &:hover {
+                    color: $main
+                }
+            }
+        }
+        
+    }
+    .exm {
+        position: relative;
+        &::before {
+            @extend %bf-af;
+            width: 2px;
+            height: 100%;
+            left: -5%;
+            background: $main;
+        }
+    }
+    .iBtn {
+        background: $main;
+        color: $white;
+        &:hover {
+            color: $main;
+            &::before {
+                background: $white;
+            }
+        }
+    }
+}
+.cntct {
+    .cn {
+        margin-bottom: 20px;
+        i {
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            font-size: 25px;
+            color: $main;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        p {
+            font-size: 15px;
+            display: inline-block;
+            margin: 0;
+        }
+        a,p {
+            font-style: italic;
+            @include transition(0.3s);  
+            &:hover {
+                color: $main
+            }
+        }
+    }
+    
+}
