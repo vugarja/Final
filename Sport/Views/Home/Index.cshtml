@@ -1,106 +1,8 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
+    ViewBag.Title = "Index";
 }
 
-<div class="container-fluid iMenu">
-    <div class="row" style="background: white; margin-bottom:80px">
-        <div class="col-md-12">
-            <ul class="small">
-                <!-- user -->
-                <li class="sign text-center"><a class="iBtn enter">Daxil ol</a></li>
-                <li class="profile d-none userDrop">
-                    <div class="userDown text-left">
-                        <strong>Ad Soyad</strong>
-                        <div class="promo d-flex justify-content-between">
-                            <span>Mövcud promokod: </span>
-                            <span class="code">D4QSE2</span>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <a href="#" class="iBtn code">Promokod</a>
-                            </div>
-                            <div class="col-6">
-                                <a href="#" class="iBtn">Çıxış</a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="index.html">Ana səhifə</a></li>
-
-                <!-- mekanlar -->
-                <li class="iDrop" style="position: relative">
-                    <a href="categories.html">Məkanlar</a>
-                    <i class="fas fa-sort-down"></i>
-                    <div class="iDown text-left">
-                        <ul>
-                            <li>
-                                <a href="categories.html">Fitness zalları</a>
-                            </li>
-                            <li>
-                                <a href="categories.html">Futbol meydançaları</a>
-                            </li>
-                            <li class="iSubDrop">
-                                <a href="categories.html">Təkbətək idman növləri</a>
-                                <i class="fas fa-sort-down"></i>
-                                <div class="iSub">
-                                    <ul>
-                                        <li><a href="categories.html">Boks</a></li>
-                                        <li><a href="categories.html">Kikboks</a></li>
-                                        <li><a href="categories.html">Güləş</a></li>
-                                        <li><a href="categories.html">Cudo</a></li>
-                                        <li><a href="categories.html">Karate</a></li>
-                                        <li><a href="categories.html">Taekvondo</a></li>
-                                        <li>
-                                            <a href="categories.html">Qaydasız döyüş</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="categories.html">Hovuzlar</a>
-                            </li>
-                            <li class="iSubDrop">
-                                <a href="categories.html">Mağazalar</a>
-                                <i class="fas fa-sort-down"></i>
-                                <div class="iSub">
-                                    <ul>
-                                        <li><a href="categories.html">İdman malları</a></li>
-                                        <li><a href="categories.html">İdman alətləri</a></li>
-                                        <li><a href="categories.html">İdman qidaları</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <!-- saglamliq -->
-                <li class="iDrop" style="position: relative">
-                    <a href="health.html">Sağlamlıq</a>
-                    <i class="fas fa-sort-down"></i>
-                    <div class="iDown text-left">
-                        <ul>
-                            <li>
-                                <a href="programs.html">Məşq proqramları</a>
-                            </li>
-                            <li>
-                                <a href="calculation.html">Sağlamlıq hesablamaları</a>
-                            </li>
-                            <li>
-                                <a href="nutrition.html">Qidalar</a>
-                            </li>
-                            <li>
-                                <a href="motivation.html">Motivasiya</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="about.html">Haqqımızda</a></li>
-                <li><a href="contact.html">Əlaqə</a></li>
-            </ul>
-        </div>
-    </div>
-
-</div>
 <main>
     <section id="home">
         <div class="canvas-wrap">
@@ -129,33 +31,31 @@
                 <!-- Fitness zalları -->
                 <div class="col-sm-4 mb-5 mekanlar">
                     <div class="card">
-                        <a href="categories.html">
+                        <a href="@Url.Action("index", "category")">
                             <div class="photo">
-                                <img src="~/Public/img/categories/fitness.jpeg">
+                                <img src="/Public/img/categories/fitness.jpeg">
                             </div>
                             <h3>Fitness zalları</h3>
                         </a>
                     </div>
                 </div>
-
                 <!-- futbol -->
                 <div class="col-sm-4 mb-5 mekanlar">
                     <div class="card">
-                        <a href="categories.html">
+                        <a href="@Url.Action("index", "category")">
                             <div class="photo">
-                                <img src="~/Public/img/categories/football.jpg">
+                                <img src="/Public/img/categories/football.jpg">
                             </div>
                             <h3>Futbol meydançaları</h3>
                         </a>
                     </div>
                 </div>
-
                 <!-- Təkbətək idman növləri -->
                 <div class="col-sm-4 mb-5 mekanlar">
                     <div class="card">
-                        <a href="categories.html">
+                        <a href="@Url.Action("index", "category")">
                             <div class="photo">
-                                <img src="~/Public/img/categories/maa.jpeg">
+                                <img src="/Public/img/categories/maa.jpeg">
                             </div>
                             <h3>Təkbətək idman növləri</h3>
                         </a>
@@ -164,9 +64,9 @@
                 <!-- hovuz -->
                 <div class="col-sm-4 mb-5 mekanlar">
                     <div class="card">
-                        <a href="categories.html">
+                        <a href="@Url.Action("index", "category")">
                             <div class="photo">
-                                <img src="~/Public/img/categories/swim.jpeg">
+                                <img src="/Public/img/categories/swim.jpeg">
                             </div>
                             <h3>Hovuzlar</h3>
                         </a>
@@ -175,9 +75,9 @@
                 <!-- magazalar -->
                 <div class="col-sm-4 mb-5 mekanlar">
                     <div class="card">
-                        <a href="categories.html">
+                        <a href="@Url.Action("index", "category")">
                             <div class="photo">
-                                <img src="~/Public/img/categories/shops.jpg">
+                                <img src="/Public/img/categories/shops.jpg">
                             </div>
                             <h3>Mağazalar</h3>
                         </a>
@@ -186,7 +86,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <a href="categories.html" class="iBtn">
+                    <a href="@Url.Action("index", "category")" class="iBtn">
                         Ətraflı
                     </a>
                 </div>
@@ -211,7 +111,7 @@
                             <div class="healthCard iTilt" data-tilt data-tilt-scale="1.1" data-tilt-axis="y">
                                 <div class="cardHead">
                                     <a href="programs.html" class="cardBg">
-                                        <img src="~/Public/img/health/programs2.jpg">
+                                        <img src="/Public/img/health/programs2.jpg">
                                     </a>
                                     <h2><a href="programs.html">Məşq proqramları</a></h2>
                                 </div>
@@ -221,7 +121,7 @@
                             <div class="healthCard iTilt" data-tilt data-tilt-scale="1.1" data-tilt-axis="y">
                                 <div class="cardHead">
                                     <a href="calculation.html" class="cardBg">
-                                        <img src="~/Public/img/health/calculate.jpg">
+                                        <img src="/Public/img/health/calculate.jpg">
                                     </a>
                                     <h2><a href="calculation.html">Hesablamalar</a></h2>
                                 </div>
@@ -231,7 +131,7 @@
                             <div class="healthCard iTilt" data-tilt data-tilt-scale="1.1" data-tilt-axis="y">
                                 <div class="cardHead">
                                     <a href="nutrition.html" class="cardBg">
-                                        <img src="~/Public/img/health/food.jpg">
+                                        <img src="/Public/img/health/food.jpg">
                                     </a>
                                     <h2><a href="nutrition.html">Qidalar</a></h2>
                                 </div>
@@ -241,7 +141,7 @@
                             <div class="healthCard iTilt" data-tilt data-tilt-scale="1.1" data-tilt-axis="y">
                                 <div class="cardHead">
                                     <a href="motivation.html" class="cardBg">
-                                        <img src="~/Public/img/health/motivation.jpg">
+                                        <img src="/Public/img/health/motivation.jpg">
                                     </a>
                                     <h2><a href="motivation.html">Motivasiya</a></h2>
                                 </div>
@@ -252,61 +152,5 @@
             </div>
         </div>
     </section>
-    <!-- <section id="shops">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-12 iHead">
-                    <h2>Mağazalar</h2>
-                </div>
-                <div class="col-lg-3 text-center iHead">
-                    <span></span>
-                    <span class="sec"></span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-lg-4 mb-5 magazalar">
-                            <div class="healthCard iTilt" data-tilt data-tilt data-tilt-axis="y">
-                                <div class="cardHead">
-                                    <a href="shop.html" class="cardBg">
-                                        <img src="img/health/wear.jpg">
-                                    </a>
-                                    <h2><a href="shop.html">İdman malları</a></h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-5 magazalar">
-                            <div class="healthCard iTilt" data-tilt data-tilt data-tilt-axis="y">
-                                <div class="cardHead">
-                                    <a href="shop.html" class="cardBg">
-                                        <img src="img/health/protein2.jpg">
-                                    </a>
-                                    <h2><a href="shop.html">İdman qidaları</a></h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-5 magazalar">
-                            <div class="healthCard iTilt" data-tilt data-tilt data-tilt-axis="y">
-                                <div class="cardHead">
-                                    <a href="shop.html" class="cardBg">
-                                        <img src="img/health/shop.jpg">
-                                    </a>
-                                    <h2><a href="shop.html">İdman alətləri</a></h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <a href="shop.html" class="iBtn">
-                        Ətraflı
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
 </main>
+

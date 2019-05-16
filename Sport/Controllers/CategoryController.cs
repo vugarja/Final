@@ -6,8 +6,9 @@ using System.Web.Mvc;
 
 namespace Sport.Controllers
 {
-    public class HomeController : Controller
+    public class CategoryController : Controller
     {
+        // GET: Categories
         public ActionResult Index()
         {
             return View();

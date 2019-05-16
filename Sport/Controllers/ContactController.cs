@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace Sport.Controllers
 {
-    public class PlacesController : Controller
+    public class ContactController : Controller
     {
-        // GET: Places
+        // GET: ContactUs
         public ActionResult Index()
         {
             return View();

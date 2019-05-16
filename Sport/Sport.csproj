@@ -141,9 +141,11 @@
     <Compile Include="Areas\Control\Controllers\RegionsController.cs" />
     <Compile Include="Areas\Control\Controllers\ServicesController.cs" />
     <Compile Include="Areas\Control\Controllers\StationsController.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HealthController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PlacesController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="DAL\SportContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1972,14 +1974,11 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Control\Models\" />
-    <Folder Include="Views\Health\" />
     <Folder Include="Views\Places\" />
   </ItemGroup>
   <ItemGroup>
@@ -2001,6 +2000,10 @@
     <Content Include="Public\scss\partials\_variables.scss" />
     <Content Include="Public\scss\style.css.map" />
     <Content Include="Public\scss\style.scss" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Health\Index.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201903191443376_Database Creation.resx">
